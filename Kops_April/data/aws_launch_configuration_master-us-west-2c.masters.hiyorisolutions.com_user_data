@@ -20,7 +20,7 @@ set -o pipefail
 NODEUP_URL=https://kubeupv2.s3.amazonaws.com/kops/1.12.3/linux/amd64/nodeup
 NODEUP_HASH=ac2d6446d50c48ca89ff981d2b97127e97be8ad8
 
-export AWS_REGION=us-east-1
+export AWS_REGION=us-west-2
 
 
 
@@ -269,7 +269,7 @@ __EOF_CLUSTER_SPEC
 cat > ig_spec.yaml << '__EOF_IG_SPEC'
 kubelet: null
 nodeLabels:
-  kops.k8s.io/instancegroup: master-us-east-1c
+  kops.k8s.io/instancegroup: master-us-west-2c
 taints: null
 
 __EOF_IG_SPEC
@@ -282,7 +282,7 @@ Assets:
 - 6bf37264ee1285d4385fdb076b9b097a1771ee18@https://github.com/kubernetes/kops/releases/download/1.12.3/linux-amd64-utils.tar.gz,https://kubeupv2.s3.amazonaws.com/kops/1.12.3/linux/amd64/utils.tar.gz
 ClusterName: hiyorisolutions.com
 ConfigBase: s3://hiyorisolutions.com/hiyorisolutions.com
-InstanceGroupName: master-us-east-1c
+InstanceGroupName: master-us-west-2c
 Tags:
 - _automatic_upgrades
 - _aws

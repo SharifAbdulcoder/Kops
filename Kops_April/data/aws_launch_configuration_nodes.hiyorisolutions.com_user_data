@@ -20,7 +20,7 @@ set -o pipefail
 NODEUP_URL=https://kubeupv2.s3.amazonaws.com/kops/1.12.3/linux/amd64/nodeup
 NODEUP_HASH=ac2d6446d50c48ca89ff981d2b97127e97be8ad8
 
-export AWS_REGION=us-east-1
+export AWS_REGION=us-west-2
 
 
 
