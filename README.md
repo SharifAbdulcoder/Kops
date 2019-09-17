@@ -23,6 +23,7 @@ Features of KOPS
 - Supports heterogeneous clusters by creating multiple instance groups
 
 
+
 ############# First lets create s3 bucket ################
 
 ""
@@ -31,6 +32,8 @@ Features of KOPS
   export KOPS_STATE_STORE="s3://my_example_cluster.com"
 
   ""
+
+
 
 ############# Create Hosted Zone ################
 
