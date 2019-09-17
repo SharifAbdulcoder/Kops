@@ -14,13 +14,13 @@ cluster. Kops automates a large part of operating Kubernetes on AWS.
 
 Features of KOPS
 
-Deploy clusters to existing virtual private clouds (VPC) or create a new VPC from scratch
-Provisions single or multiple master clusters
-Configurable bastion machines for SSH access to individual cluster nodes
-Built on a state-sync model for dry-runs and automatic idempotency
-Direct infrastructure manipulation, or works with CloudFormation and Terraform
-Rolling cluster updates
-Supports heterogeneous clusters by creating multiple instance groups
+- Deploy clusters to existing virtual private clouds (VPC) or create a new VPC from scratch
+- Provisions single or multiple master clusters
+- Configurable bastion machines for SSH access to individual cluster nodes
+- Built on a state-sync model for dry-runs and automatic idempotency
+- Direct infrastructure manipulation, or works with CloudFormation and Terraform
+- Rolling cluster updates
+- Supports heterogeneous clusters by creating multiple instance groups
 
 
 ############# First lets create s3 bucket ################
