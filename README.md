@@ -46,15 +46,16 @@ You can obtain an example by running:
 ``` kops create cluster --help ```
 
   export KOPS_STATE_STORE="s3://khuslenabdul.com"
-  kops create cluster khuslenabdul.com \
+  kops create cluster "khuslenabdul.com" \
   --node-count 3 \
-  --zones us-east-1a, us-east-1b, us-east-1c \
+  --zones us-east-1a,us-east-1b,us-east-1c \
   --node-size t2.micro \
   --master-size t2.micro \
   --master-zones  us-east-1a \
   --networking weave \
+  --dns private \
   --topology private \
   --bastion="true" \
-  --out= . \
-  --target="terraform"
+  --out=. \
+  --target="terraform" \
   --yes
