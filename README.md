@@ -51,7 +51,7 @@ You can obtain an example by running:
   --zones us-east-1a,us-east-1b,us-east-1c \
   --node-size t2.micro \
   --master-size t2.micro \
-  --master-zones  us-east-1a \
+  --master-zones  us-east-1a,us-east-1b,us-east-1c \
   --networking weave \
   --dns private \
   --topology private \
@@ -59,3 +59,18 @@ You can obtain an example by running:
   --out=. \
   --target="terraform" \
   --yes
+
+
+########################## UPDATING CLUSTER ##########################
+
+Upgrading Kubernetes is easy with kops. The cluster spec contains a kubernetesVersion, so you can simply edit it with ``` kops edit ``` , and apply the updated configuration to your cluster.
+
+The kops upgrade command also automates checking for and applying updates.
+
+It is recommended to run the latest version of Kops to ensure compatibility with the target kubernetesVersion. When applying a Kubernetes minor version upgrade (e.g. v1.5.3 to v1.6.0), you should confirm that the target kubernetesVersion is compatible with the current Kops release.
+
+``` kops edit cluster CLUSTER_NAME --state s3://STATE ```
+``` kops update cluster CLUSTER_NAME --state s3://STATE  --yes ```
+``` kops rolling-update cluster  CLUSTER_NAME --state s3://STATE ```
+                          OR                
+              You can play with the autoscaling
